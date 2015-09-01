@@ -1,0 +1,1 @@
+eval "$(gulp --completion=zsh)"
