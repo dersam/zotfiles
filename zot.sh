@@ -12,6 +12,8 @@ echo -e "${RESET}${BLUE}${BOLD}Updating oh-my-zsh custom modules...${RESET}${GRE
 ln -vsfn ~/zotfiles/custom/* ~/.oh-my-zsh/custom
 echo -e "Symlinking configs..."
 ln -vsfn ~/zotfiles/configs/.gitconfig ~/
+echo -e "Symlinking themes..."
+ln -vsfn ~/zotfiles/themes/staples.zsh-theme ~/.oh-my-zsh/themes/
 echo -e "${RESET}"
 
 if [[ -f $HOME/z.sh ]]; then
