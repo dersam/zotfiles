@@ -10,6 +10,8 @@ cd ~/zotfiles && git pull
 
 echo -e "${RESET}${BLUE}${BOLD}Updating oh-my-zsh custom modules...${RESET}${GREEN}${DIM}"
 ln -vsfn ~/zotfiles/custom/* ~/.oh-my-zsh/custom
+echo -e "Symlinking configs..."
+ln -vsfn ~/zotfiles/configs/.gitconfig ~/
 echo -e "${RESET}"
 
 if [[ -f $HOME/z.sh ]]; then
