@@ -25,4 +25,4 @@ else
 fi
 
 echo -e "Reloading zotfiles..."
-source ~/.zshrc
+source $HOME/.zshrc

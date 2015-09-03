@@ -64,4 +64,4 @@ alias historypurgeall='cat /dev/null > ~/.bash_history && history -c && history 
 # Source: http://thoughtsbyclayg.blogspot.ca/2008/02/how-to-delete-last-command-from-bash.html
 alias historypurgelast='history -d $((HISTCMD-2)) && history -d $((HISTCMD-1))'
 
-alias zot=$HOME/zotfiles/zot.sh
+alias zot=". $HOME/zotfiles/zot.sh"
