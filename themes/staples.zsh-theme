@@ -107,7 +107,7 @@ bureau_precmd () {
 }
 
 setopt prompt_subst
-PROMPT='> $_LIBERTY '
+PROMPT='%{$fg[green]%}Z%{$reset_color%} $_LIBERTY '
 RPROMPT='$(nvm_prompt_info) $(bureau_git_prompt)'
 
 autoload -U add-zsh-hook
