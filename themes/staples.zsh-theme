@@ -96,8 +96,19 @@ get_space () {
   echo $SPACES
 }
 
+get_usables () {
+	local usables='';
+	if [[ -a gulpfile.js ]]; then
+		usables="$usables<gulp>"
+	fi
+
+	echo "%{$fg[magenta]%}$usables%{$reset_color%}"
+}
+
+setopt prompt_subst
+
 #_1LEFT="$_USERNAME $_PATH"
-_1RIGHT="[%*] "
+_1RIGHT=" [%*] "
 _1LEFT="$_PATH"
 
 bureau_precmd () {
@@ -106,9 +117,9 @@ bureau_precmd () {
   print -rP "$_1LEFT$_1SPACES$_1RIGHT"
 }
 
-setopt prompt_subst
+#setopt prompt_subst
 PROMPT='%{$fg[green]%}Z%{$reset_color%} $_LIBERTY '
-RPROMPT='$(nvm_prompt_info) $(bureau_git_prompt)'
+RPROMPT='$(nvm_prompt_info) $(get_usables) $(bureau_git_prompt)'
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd bureau_precmd
