@@ -1,5 +1,5 @@
 Installation
-* Run zot.sh (it will alias itself to zot after the first run).
+* Run zot.sh (it will alias itself to `zot` after the first run).
 * oh-my-zsh is required.
 
 TODO
