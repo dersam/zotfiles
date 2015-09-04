@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+curdir=`pwd`
 cd $HOME
 autoload -U colors
 colors
@@ -26,3 +27,5 @@ fi
 
 echo -e "Reloading zotfiles..."
 source $HOME/.zshrc
+
+cd $curdir
