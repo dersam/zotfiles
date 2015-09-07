@@ -7,3 +7,4 @@ TODO
 * Improve color handling so formatting.sh is totally compatible with dane's bash dotfiles
 * standardize command prefixes so it's not an unrememberable jumble of names
 * improve the abstraction of usables in the staples theme.
+* Add zot to home bin.
