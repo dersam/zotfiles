@@ -128,10 +128,10 @@ bureau_precmd () {
 }
 
 #setopt prompt_subst
-PROMPT='$(get_usables)%{$fg[green]%}Z%{$reset_color%} $_LIBERTY '
+PROMPT='%{$fg[green]%}Z%{$reset_color%} $_LIBERTY '
 
 #RPROMPT='$(nvm_prompt_info) $(get_usables) $(bureau_git_prompt)'
-RPROMPT='$(bureau_git_prompt)'
+RPROMPT='$(get_usables)$(bureau_git_prompt)'
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd bureau_precmd
