@@ -99,18 +99,20 @@ get_space () {
 get_usables () {
 	local usables='';
 	if [[ -a gulpfile.js ]]; then
-		usables="$usables <gulp>"
+		usables="<gulp> $usables"
 	fi
 
 	if [[ -a 'composer.json' ]]; then
-		usables="$usables <composer>"
+		usables="<composer> $usables"
 	fi
 
 	if [[ -f 'package.json' ]]; then
-		usables="$usables <npm>"
+		usables="<npm> $usables"
 	fi
 
-	echo "%{$fg[magenta]%}$usables%{$reset_color%}"
+	if [[ -n $usables ]]; then
+		echo "%{$fg[magenta]%}$usables%{$reset_color%}"
+	fi
 }
 
 setopt prompt_subst
@@ -126,9 +128,10 @@ bureau_precmd () {
 }
 
 #setopt prompt_subst
-PROMPT='%{$fg[green]%}Z%{$reset_color%} $_LIBERTY '
+PROMPT='$(get_usables)%{$fg[green]%}Z%{$reset_color%} $_LIBERTY '
+
 #RPROMPT='$(nvm_prompt_info) $(get_usables) $(bureau_git_prompt)'
-RPROMPT='$(get_usables) $(bureau_git_prompt)'
+RPROMPT='$(bureau_git_prompt)'
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd bureau_precmd
