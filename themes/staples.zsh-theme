@@ -128,7 +128,7 @@ bureau_precmd () {
 }
 
 #setopt prompt_subst
-PROMPT='%{$fg[green]%}Z%{$reset_color%} $_LIBERTY '
+PROMPT='%{$fg[green]%}Z%{$reset_color%}$_LIBERTY '
 
 #RPROMPT='$(nvm_prompt_info) $(get_usables) $(bureau_git_prompt)'
 RPROMPT='$(get_usables)$(bureau_git_prompt)'
