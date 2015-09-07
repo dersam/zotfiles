@@ -110,6 +110,10 @@ get_usables () {
 		usables="<npm> $usables"
 	fi
 
+	if [[ -f 'VagrantFile' ]]; then
+		usables="<vagrant> $usables"
+	fi
+
 	if [[ -n $usables ]]; then
 		echo "%{$fg[magenta]%}$usables%{$reset_color%}"
 	fi
