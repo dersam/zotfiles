@@ -106,6 +106,10 @@ get_usables () {
 		usables="$usables <composer>"
 	fi
 
+	if [[ -f 'package.json' ]]; then
+		usables="$usables <npm>"
+	fi
+
 	echo "%{$fg[magenta]%}$usables%{$reset_color%}"
 }
 
