@@ -133,12 +133,12 @@ bureau_precmd () {
 
 ssh_status_prompt () {
 	if [[ -n "$SSH_CLIENT" ]]; then
-		echo '%n@%m'
+		echo '%n@%m '
 	fi
 }
 
 #setopt prompt_subst
-PROMPT='%{$fg[red]%}$(ssh_status_prompt) %{$fg[green]%}Z%{$reset_color%}$_LIBERTY '
+PROMPT='%{$fg[red]%}$(ssh_status_prompt)%{$fg[green]%}Z%{$reset_color%}$_LIBERTY '
 
 #RPROMPT='$(nvm_prompt_info) $(get_usables) $(bureau_git_prompt)'
 RPROMPT='$(get_usables)$(bureau_git_prompt)'
