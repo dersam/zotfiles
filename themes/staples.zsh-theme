@@ -138,7 +138,7 @@ ssh_status_prompt () {
 }
 
 #setopt prompt_subst
-PROMPT='$(ssh_status_prompt) %{$fg[green]%}Z%{$reset_color%}$_LIBERTY '
+PROMPT='%{$fg[red]%}$(ssh_status_prompt) %{$fg[green]%}Z%{$reset_color%}$_LIBERTY '
 
 #RPROMPT='$(nvm_prompt_info) $(get_usables) $(bureau_git_prompt)'
 RPROMPT='$(get_usables)$(bureau_git_prompt)'
