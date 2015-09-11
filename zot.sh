@@ -30,6 +30,4 @@ fi
 echo -e "Reloading zotfiles..."
 source $HOME/.zshrc
 
-source ~/extra.zsh
-
 cd $curdir
