@@ -27,6 +27,11 @@ else
 	ln -vsfn ~/zotfiles/z/z.sh ~/z.sh
 fi
 
+echo -e "Installing additional modules..."
+if [[ -d $HOME/linus-zsh ]]; then
+	source ~/linus-zsh/zot.sh
+fi
+
 echo -e "Reloading zotfiles..."
 source $HOME/.zshrc
 
