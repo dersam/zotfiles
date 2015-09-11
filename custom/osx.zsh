@@ -1,5 +1,10 @@
 ## .osx
 
+export ZSH_HOST_OS=$(uname | awk '{print tolower($0)}')
+
+case $ZSH_HOST_OS in
+	darwin*)
+
 # Exports
 
 # Assumes that coreutils and other GNU tools have replaced OSX'
@@ -29,3 +34,5 @@ alias update='dotfiles; composer selfupdate; softwareupdate -i -a -v; brew docto
 defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
 # Faster keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
+;;
+esac
