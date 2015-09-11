@@ -36,3 +36,5 @@ echo -e "Reloading zotfiles..."
 source $HOME/.zshrc
 
 cd $curdir
+
+echo -e "zot complete."
