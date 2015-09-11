@@ -49,9 +49,9 @@ goodmorning() {
 	corgi
 	echo "Good morning, today is `date`"
 	pulldotfiles
+	brew update
 	brew outdated
-	brew upgrade --all
-	brew upgrade node
+	brew upgrade
 	sudo npm install -g npm@latest
 }
 
