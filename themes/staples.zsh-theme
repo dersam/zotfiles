@@ -133,7 +133,7 @@ bureau_precmd () {
 
 ssh_status_prompt () {
 	if [[ -n "$SSH_CLIENT" ]]; then
-		echo "\u@\h"
+		echo '\u@\h'
 	fi
 }
 
