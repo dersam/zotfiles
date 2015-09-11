@@ -61,10 +61,9 @@ startredis() {
 
 cdpath=(~ /redpower /redpower/vendor /redpower/vendor/linusshops)
 
-#source ~/.formatting
-#source ~/.functions
-source ~/.pigrc
+if [[ -f $HOME/.pigrc ]]; then
+	source ~/.pigrc
+fi
 
 . ~/z.sh
 
-source $HOME/.oh-my-zsh/plugins/calc/calc.plugin.zsh
