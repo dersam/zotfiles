@@ -6,6 +6,8 @@ colors
 
 source ~/zotfiles/custom/formatting.zsh
 
+touch ~/extra.zsh
+
 echo -e "${BLUE}${BOLD}Checking for updates...${RESET}"
 cd ~/zotfiles && git pull
 
@@ -27,5 +29,7 @@ fi
 
 echo -e "Reloading zotfiles..."
 source $HOME/.zshrc
+
+source ~/extra.zsh
 
 cd $curdir
