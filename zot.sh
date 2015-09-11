@@ -31,6 +31,11 @@ echo -e "Installing additional modules..."
 if [[ -d $HOME/linus-zsh ]]; then
 	source ~/linus-zsh/zot.sh
 fi
+if [[ ! -d $HOME/antigen ]]; then
+	cd $HOME
+	git clone git@github.com:zsh-users/antigen.git
+	cd -
+fi
 
 echo -e "Reloading zotfiles..."
 source $HOME/.zshrc
