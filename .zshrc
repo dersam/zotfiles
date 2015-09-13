@@ -15,7 +15,7 @@ antigen bundle sudo
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 #Load personal customizations
-
+antigen bundle dersam/zotfiles custom
 
 #set up theme
 antigen theme dersam/staples staples
