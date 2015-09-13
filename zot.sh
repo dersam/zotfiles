@@ -11,6 +11,9 @@ touch ~/extra.zsh
 echo -e "${BLUE}${BOLD}Checking for updates...${RESET}"
 cd ~/zotfiles && git pull
 
+echo -e "Linking .zshrc..."
+ln -vsfn ~/zotfiles/.zshrc ~/.zshrc
+
 echo -e "${RESET}${BLUE}${BOLD}Updating oh-my-zsh custom modules...${RESET}${GREEN}${DIM}"
 ln -vsfn ~/zotfiles/custom/* ~/.oh-my-zsh/custom
 echo -e "Symlinking configs..."
