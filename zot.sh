@@ -24,14 +24,6 @@ echo -e "Symlinking configs..."
 ln -vsfn ~/zotfiles/configs/.gitconfig ~/
 echo -e "${RESET}"
 
-if [[ -f $HOME/z.sh ]]; then
-	echo -e "${RESET}${BLUE}${BOLD}Z.sh is installed.${RESET}${GREEN}${DIM}"
-else
-	echo -e "${RESET}${BLUE}${BOLD}Installing Z.sh...${RESET}${GREEN}${DIM}"
-	git clone git@github.com:rupa/z.git
-	ln -vsfn ~/zotfiles/z/z.sh ~/z.sh
-fi
-
 echo -e "Reloading zotfiles..."
 source $HOME/.zshrc
 

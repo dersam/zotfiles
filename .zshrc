@@ -14,6 +14,13 @@ antigen bundle sudo
 #Load third party plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+#Install and configure Z
+antigen bundle rupa/z
+add-zsh-hook precmd _z_precmd
+function _z_precmd {
+	_z --add "$PWD"
+}
+
 #Load personal customizations
 antigen bundle $HOME/zotfiles/custom --no-local-clone
 

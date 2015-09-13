@@ -65,5 +65,4 @@ if [[ -f $HOME/.pigrc ]]; then
 	source ~/.pigrc
 fi
 
-. ~/z.sh
 
