@@ -1,11 +1,19 @@
-Installation
-* Run zot.sh (it will alias itself to `zot` after the first run).
-* oh-my-zsh is required.
+OSX/Linux dotfiles for zsh, managed via antigen.
 
-TODO
-* Improve handling of non-osx environments (don't link in osx customs)
-* Autoinstall oh-my-zsh if not present
-* Improve color handling so formatting.sh is totally compatible with dane's bash dotfiles
-* standardize command prefixes so it's not an unrememberable jumble of names
+Supports an ~/extra.zsh file for adding customizations for your own specific
+environment.
+
+Majority of bundle loading occurs in .zshrc, which is symlinked out via zot.
+
+#Installation
+* Run zot.sh (it will alias itself to `zot` after the first run).
+* Zot will overwrite anything that it wants to symlink (such as gitconfig).
+* Running zot will update both the local repo, and the antigen repos.
+
+#Contributors
+Samuel Schmidt
+
+Heavily based on https://github.com/danemacmillan/dotfiles.
+
+#TODO
 * improve the abstraction of usables in the staples theme.
-* Add zot to home bin.
