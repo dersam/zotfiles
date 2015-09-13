@@ -65,3 +65,6 @@ alias historypurgeall='cat /dev/null > ~/.bash_history && history -c && history 
 alias historypurgelast='history -d $((HISTCMD-2)) && history -d $((HISTCMD-1))'
 
 alias zot=". $HOME/zotfiles/zot.sh"
+
+#Alias defaults for k
+alias k="k --all --human"
