@@ -7,6 +7,7 @@ colors
 source ~/zotfiles/custom/formatting.zsh
 
 if [[ ! -d $HOME/antigen ]]; then
+	echo -e "Antigen not found, installing..."
 	cd $HOME
 	git clone git@github.com:zsh-users/antigen.git
 	cd -
