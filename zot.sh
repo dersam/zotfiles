@@ -17,6 +17,8 @@ touch ~/extra.zsh
 
 echo -e "${BLUE}${BOLD}Checking for updates...${RESET}"
 cd ~/zotfiles && git pull
+antigen update
+antigen selfupdate
 
 echo -e "Linking .zshrc..."
 ln -vsfn ~/zotfiles/.zshrc ~/.zshrc
