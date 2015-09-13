@@ -13,6 +13,7 @@ antigen bundle sudo
 
 #Load third party plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle rimraf/k
 
 #Install and configure Z
 antigen bundle rupa/z
