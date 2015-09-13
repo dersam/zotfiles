@@ -14,7 +14,10 @@ antigen bundle sudo
 #Load third party plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+#Load personal customizations
+
+
 #set up theme
-antigen theme bureau
+antigen theme dersam/staples staples
 
 antigen apply
