@@ -28,6 +28,7 @@ ln -vsfn ~/zotfiles/configs/.gitconfig ~/
 ln -vsfn ~/zotfiles/configs/.vimperatorrc ~/
 ln -vsfn ~/zotfiles/configs/.my.cnf ~/
 ln -vsfn ~/zotfiles/configs/.grcat ~/
+ln -vsfn ~/zotfiles/configs/.myclirc ~/
 echo -e "${RESET}"
 
 echo -e "Reloading zotfiles..."
