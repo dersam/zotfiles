@@ -4,7 +4,8 @@
 unalias dotfiles 2&>/dev/null
 
 # Navigational
-alias ll='ls --color -lah --group-directories-first'
+#alias ll='ls --color -lah --group-directories-first'
+alias ll='k --all --human'
 alias llt='ls --color -laht --group-directories-first' # Sort by newest first.
 alias ..='cd ..'
 alias ...="cd ../.."
@@ -67,4 +68,4 @@ alias historypurgelast='history -d $((HISTCMD-2)) && history -d $((HISTCMD-1))'
 alias zot=". $HOME/zotfiles/zot.sh"
 
 #Alias defaults for k
-alias k="k --all --human"
+#alias k="k --all --human"
