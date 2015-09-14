@@ -10,6 +10,7 @@ antigen bundle node
 antigen bundle npm
 antigen bundle composer
 antigen bundle sudo
+antigen bundle wd
 
 #Load third party plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
