@@ -23,10 +23,11 @@ function _z_precmd {
 	_z --add "$PWD"
 }
 
+#Add themes
+antigen theme dersam/staples staples
+
 #Load personal customizations
 antigen bundle $HOME/zotfiles/custom --no-local-clone
 
-#set up theme
-antigen theme dersam/staples staples
 
 antigen apply
