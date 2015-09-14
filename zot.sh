@@ -26,6 +26,8 @@ ln -vsfn ~/zotfiles/.zshrc ~/.zshrc
 echo -e "Symlinking configs..."
 ln -vsfn ~/zotfiles/configs/.gitconfig ~/
 ln -vsfn ~/zotfiles/configs/.vimperatorrc ~/
+ln -vsfn ~/zotfiles/configs/.my.cnf ~/
+ln -vsfn ~/zotfiles/configs/.grcat ~/
 echo -e "${RESET}"
 
 echo -e "Reloading zotfiles..."
