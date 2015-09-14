@@ -17,3 +17,5 @@ Heavily based on https://github.com/danemacmillan/dotfiles.
 
 #TODO
 * improve the abstraction of usables in the staples theme.
+* Add vimrc and vundler. (import configs from dane, overwrite when defined here?)
+
