@@ -2,6 +2,6 @@
 
 alias mysql="mycli"
 
-cdev () {
+devdb () {
 	mysql -h develop.vagrant.dev -u root
 }
