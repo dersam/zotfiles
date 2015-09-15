@@ -29,6 +29,7 @@ ln -vsfn ~/zotfiles/configs/.vimperatorrc ~/
 ln -vsfn ~/zotfiles/configs/.my.cnf ~/
 ln -vsfn ~/zotfiles/configs/.grcat ~/
 ln -vsfn ~/zotfiles/configs/.myclirc ~/
+ln -vsfn ~/zotfiles/configs/.taskrc ~/
 echo -e "${RESET}"
 
 echo -e "Reloading zotfiles..."

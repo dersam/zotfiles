@@ -11,6 +11,7 @@ antigen bundle npm
 antigen bundle composer
 antigen bundle sudo
 antigen bundle wd
+antigen bundle taskwarrior
 
 #Load third party plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
