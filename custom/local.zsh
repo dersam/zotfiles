@@ -1,6 +1,6 @@
 alias yog="wine ~/Sqlyog/SQLyog\ Community/SQLyogCommunity.exe"
 
-export PATH=~/npm-global/bin:$PATH
+export PATH=/usr/local/sbin:~/npm-global/bin:$PATH
 export EDITOR="vim"
 
 #Commit something to git for WEBBUG with a comment
