@@ -60,6 +60,10 @@ startredis() {
 	redis-server /usr/local/etc/redis.conf
 }
 
+re() {
+	tmux attach devenv
+}
+
 cdpath=(~ /redpower /redpower/vendor /redpower/vendor/linusshops)
 
 if [[ -f $HOME/.pigrc ]]; then
