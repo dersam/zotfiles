@@ -7,7 +7,7 @@ root: ~/
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
-pre: vup && vreload
+#pre: vup && vreload
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -32,6 +32,6 @@ windows:
       layout: main-vertical
       panes:
         - devdb
-        - linus
+        - linus > /dev/null
         - cd ~
-  - logs: linus && tail -f var/log/exception.log
+  - server: vup && vreload && ssh vagrant
