@@ -35,4 +35,4 @@ windows:
         - linus > /dev/null
         - cd ~
   - mail: alpine
-  - server: vup && vreload && ssh vagrant
+  - vagrant: vup && vreload && ssh vagrant

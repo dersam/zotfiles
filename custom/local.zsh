@@ -2,6 +2,7 @@ alias yog="wine ~/Sqlyog/SQLyog\ Community/SQLyogCommunity.exe"
 
 export PATH=/usr/local/sbin:~/npm-global/bin:$PATH
 export EDITOR="vim"
+export DISABLE_AUTO_TITLE=true
 
 #Commit something to git for WEBBUG with a comment
 gcj(){
