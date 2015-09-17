@@ -29,6 +29,5 @@ antigen theme dersam/staples staples
 
 #Load personal customizations
 antigen bundle $HOME/zotfiles/custom --no-local-clone
-antigen bundle $HOME/.dotfiles --no-local-clone
 
 antigen apply
