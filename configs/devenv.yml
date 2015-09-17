@@ -34,4 +34,5 @@ windows:
         - devdb
         - linus > /dev/null
         - cd ~
+  - mail: alpine
   - server: vup && vreload && ssh vagrant
