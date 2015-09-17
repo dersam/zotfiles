@@ -69,3 +69,6 @@ alias zot=". $HOME/zotfiles/zot.sh"
 
 #Alias defaults for k
 #alias k="k --all --human"
+
+alias websearch="web_search google"
+
