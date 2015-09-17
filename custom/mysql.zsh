@@ -3,5 +3,5 @@
 alias mysql="mycli"
 
 devdb () {
-	mysql -h develop.vagrant.dev -u root
+	mysql -h develop.vagrant.dev -u root -D production
 }
