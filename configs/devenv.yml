@@ -29,10 +29,11 @@ attach: true
 
 windows:
   - dev:
-      layout: main-vertical
+      layout: tiled
       panes:
         - devdb
         - linus > /dev/null
+        - task
         - cd ~
   - mail: alpine
   - vagrant: vup && vreload && ssh vagrant
