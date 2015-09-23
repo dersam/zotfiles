@@ -37,3 +37,4 @@ windows:
         - cd ~
   - mail: alpine
   - vagrant: vup && vreload && ssh vagrant
+  - caf: caffeinate
