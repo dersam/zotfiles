@@ -33,7 +33,7 @@ windows:
       panes:
         - devdb
         - linus > /dev/null
-        - task
+        - watch -n1 task
         - cd ~
   - mail: alpine
   - vagrant: vup && vreload && ssh vagrant
