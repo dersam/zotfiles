@@ -2,7 +2,8 @@
 
 set complete=stl
 set gui=none,tabs
-colorscheme darkness
+"colorscheme darkness
+colorscheme fxdevtools-dark
 
 " iTerm-like mapping for moving tabs.
 nnoremap <S-M-Left> :tabm -1<CR>
