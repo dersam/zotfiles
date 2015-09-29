@@ -12,6 +12,7 @@ antigen bundle composer
 antigen bundle sudo
 antigen bundle wd
 antigen bundle taskwarrior
+antigen bundle arialdomartini/oh-my-git
 
 #Load third party plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -25,7 +26,9 @@ function _z_precmd {
 }
 
 #Add themes
-antigen theme dersam/staples staples
+#antigen theme dersam/staples staples
+#Use my fork of the oh-my-git themes for goodies from staples.
+antigen theme dersam/oh-my-git-themes oppa-lana-style
 
 #Load personal customizations
 antigen bundle $HOME/zotfiles/custom --no-local-clone
