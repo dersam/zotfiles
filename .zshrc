@@ -29,6 +29,8 @@ function _z_precmd {
 antigen theme dersam/staples staples
 #Use my fork of the oh-my-git themes for goodies from staples.
 #antigen theme dersam/oh-my-git-themes oppa-lana-style
+#antigen theme arialdomartini/oh-my-git-themes arialdo-pathinline
+#antigen theme dersam/oh-my-git-themes arialdo-granzestyle
 
 #Load personal customizations
 antigen bundle $HOME/zotfiles/custom --no-local-clone
