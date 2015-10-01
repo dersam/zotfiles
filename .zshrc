@@ -18,13 +18,6 @@ antigen bundle arialdomartini/oh-my-git
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle rimraf/k
 
-#Install fish like autosuggestions
-antigen bundle tarruda/zsh-autosuggestions
-zle-line-init() {
-    zle autosuggest-start
-	}
-zle -N zle-line-init
-
 #Install and configure Z
 antigen bundle rupa/z
 add-zsh-hook precmd _z_precmd
