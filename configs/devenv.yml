@@ -36,5 +36,5 @@ windows:
         - watch -n1 task
         - cd ~
   - mail: alpine
-  - vagrant: vup && vreload && ssh vagrant
+  - vagrant: cd ~/boxes/develop && vagrant ssh
   - caf: caffeinate
