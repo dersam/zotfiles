@@ -35,6 +35,5 @@ windows:
         - linus > /dev/null
         - watch -n1 task
         - cd ~
-  - mail: alpine
   - vagrant: cd ~/boxes/develop && vagrant ssh
   - caf: caffeinate
