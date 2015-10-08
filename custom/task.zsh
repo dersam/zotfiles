@@ -4,4 +4,5 @@ tn () {
 
 td () {
 	task $1 done
+	task sync
 }
