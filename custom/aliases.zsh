@@ -72,3 +72,4 @@ alias zot=". $HOME/zotfiles/zot.sh"
 
 alias websearch="web_search google"
 
+alias prophet="~/boxes/develop/foss/prophet/prophet"
