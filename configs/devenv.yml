@@ -31,9 +31,9 @@ windows:
   - dev:
       layout: tiled
       panes:
-        - devdb
-        - linus > /dev/null
+        - cd ~/hack/magento
+        - cd ~/hack
         - watch -n1 task
         - cd ~
-  - vagrant: cd ~/boxes/develop && vagrant ssh
+  - vagrant: cd ~/boxes/develop
   - caf: caffeinate
