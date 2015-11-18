@@ -35,5 +35,4 @@ windows:
         - cd ~/hack
         - watch -n1 task
         - cd ~
-  - vagrant: cd ~/boxes/develop
   - caf: caffeinate
