@@ -1,6 +1,6 @@
 "3.10.1 (created: 2015/08/25 00:41:59)
 
-set complete=stl
+set complete=sl
 set gui=none,tabs
 "colorscheme darkness
 colorscheme fxdevtools-dark
