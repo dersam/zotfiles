@@ -1,4 +1,4 @@
-cdev () {
+cdevelop () {
 	git checkout develop
 }
 
@@ -8,4 +8,12 @@ cstage () {
 
 cmaster () {
 	git checkout master
+}
+
+clast () {
+	git checkout @{-1}
+}
+
+clastn () {
+	git checkout @{-$1}
 }
