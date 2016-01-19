@@ -9,6 +9,6 @@ td () {
 }
 
 ta () {
-	task add $1
+	task add $@
 	task sync
 }
