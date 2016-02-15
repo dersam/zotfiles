@@ -13,6 +13,10 @@ alias inphantom="phantomjs --webdriver=8643 --debug=true --ssl-protocol=any --ig
 
 alias rx='rr vagrant "sudo /etc/init.d/nginx restart"'
 
+alias makedocker="docker-machine create --driver=parallels --parallels-memory=4000 default && eval $(docker-machine env default)"
+
+alias dockerup="docker-machine start default"
+
 alias selbuild="docker run --rm --name=grid --add-host='develop.vagrant.dev:192.168.80.80' -p 4444:24444 -p 5920:25900 \
   -v /dev/shm:/dev/shm -e VNC_PASSWORD=hola elgalu/selenium:2.51.0b"
 
