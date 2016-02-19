@@ -37,6 +37,9 @@ echo -e "${RESET}"
 echo -e "Update danemacmillan dotfiles"
 pulldotfiles
 
+echo -e "Update path..."
+PATH=~/zotfiles/bin:$PATH
+
 echo -e "Reloading zotfiles..."
 source $HOME/.zshrc
 
