@@ -16,3 +16,11 @@ shmux () {
 			echo "Unrecognized command " $1
 	esac
 }
+
+_shmux_completion () {
+	local -a options
+	options=('attach:attach to devenv session', 'restart:restart devenv from tmuxinator')
+	_describe 'values' options
+}
+
+compdef _shmux_completion shmux
