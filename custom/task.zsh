@@ -12,3 +12,17 @@ ta () {
 	task add $@
 	task sync
 }
+
+tasklist () {
+	while true
+	do
+		clear
+		task $@
+		sleep 1
+	done
+}
+
+taskmux () {
+	tmux kill-session -t tasklist
+	tmuxinator start tasklist
+}

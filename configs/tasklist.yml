@@ -31,5 +31,5 @@ windows:
   - dev:
       layout: cd62,99x53,0,0[99x27,0,0,10,99x25,0,28,11]
       panes:
-        - watch -n1 task
+        - tasklist
         -
