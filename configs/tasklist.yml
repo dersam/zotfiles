@@ -1,6 +1,6 @@
 # ~/.tmuxinator/devenv.yml
 
-name: devenv
+name: tasklist
 root: ~/
 
 # Optional tmux socket
@@ -19,7 +19,7 @@ root: ~/
 # tmux_command: byobu
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
-startup_window: dev
+startup_window: task
 
 # Controls whether the tmux session should be attached to automatically. Defaults to true.
 attach: true
@@ -29,15 +29,7 @@ attach: true
 
 windows:
   - dev:
-      layout: tiled
+      layout: main-horizontal
       panes:
-        - cd ~/hack/magento
-        - cd ~/hack
-        - cd ~/boxes/develop
-        - cd ~
-  - test:
-      layout: d10d,204x63,0,0{100x63,0,0,1,103x63,101,0[103x31,101,0,5,103x31,101,32,6]}
-      panes:
-        - cd ~/hack/magento
-        - ssh vagrant
-        - cd ~/hack
+        - watch -n1 task
+        -
