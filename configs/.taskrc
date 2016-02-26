@@ -28,9 +28,3 @@ data.location=~/.task
 #include /usr/local/Cellar/task/2.4.4/share/doc/task/rc/solarized-dark-256.theme
 #include /usr/local/Cellar/task/2.4.4/share/doc/task/rc/solarized-light-256.theme
 #include /usr/local/Cellar/task/2.4.4/share/doc/task/rc/no-color.theme
-
-#taskd.server=freecinc.com:53589
-#taskd.key=\/Users\/samuelschmidt\/.task\/freecinc_43d4dfb7.key.pem
-#taskd.certificate=\/Users\/samuelschmidt\/.task\/freecinc_43d4dfb7.cert.pem
-#taskd.ca=\/Users\/samuelschmidt\/.task\/freecinc_43d4dfb7.ca.pem
-#taskd.credentials=FreeCinc\/freecinc_43d4dfb7\/189f2bbb-2b53-4e6c-8cc1-df41ac431b5c
