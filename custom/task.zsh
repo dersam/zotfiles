@@ -10,6 +10,22 @@ ta () {
 	task add $@
 }
 
+ts () {
+	task $1 start
+}
+
+th () {
+	task $1 stop
+}
+
+tdep () {
+	task $1 modify depends:$2
+}
+
+ams () {
+	task sync
+}
+
 tasklist () {
 	while true
 	do
