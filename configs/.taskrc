@@ -32,3 +32,6 @@ data.location=~/.task
 include /Users/samuelschmidt/zotfiles/configs/solarized.theme
 urgency.user.project.topcat.coefficient=5.0
 uda.priority.values=H,M,,L
+
+#Credentials go here.
+include ~/zotfiles/local/task
