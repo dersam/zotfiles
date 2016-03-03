@@ -30,11 +30,11 @@ data.location=~/.task
 #include /usr/local/Cellar/task/2.4.4/share/doc/task/rc/no-color.theme
 
 include /Users/samuelschmidt/zotfiles/configs/solarized.theme
-urgency.user.project.topcat.coefficient=5.0
 uda.priority.values=H,M,,L
 
 #Credentials go here.
-include ~/zotfiles/local/task
 uda.totalactivetime.type=duration
 uda.totalactivetime.label=Total active time
 uda.totalactivetime.values=
+
+include ~/zotfiles/local/task.local
