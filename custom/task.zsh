@@ -26,9 +26,8 @@ ams () {
 	task sync
 }
 
-tconfig () {
+tcon () {
 	task config $@
-	resty https://inthe.am/api/v1
 }
 
 tasklist () {
