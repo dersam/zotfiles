@@ -32,6 +32,9 @@ vcache(){
 		stop)
 			ssh -qtt vagrant "sudo /etc/init.d/varnish stop"
 			;;
+		status)
+			ssh -qtt vagrant "sudo /etc/init.d/varnish status"
+			;;
 		restart)
 			ssh -qtt vagrant "sudo /etc/init.d/varnish restart"
 			;;
@@ -70,5 +73,3 @@ cdpath=(~ /redpower /redpower/vendor /redpower/vendor/linusshops)
 if [[ -f $HOME/.pigrc ]]; then
 	source ~/.pigrc
 fi
-
-
