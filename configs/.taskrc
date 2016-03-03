@@ -31,6 +31,7 @@ data.location=~/.task
 
 include /Users/samuelschmidt/zotfiles/configs/solarized.theme
 uda.priority.values=H,M,,L
+urgency.uda.priority.L.coefficient=-2.0
 
 #Credentials go here.
 uda.totalactivetime.type=duration
