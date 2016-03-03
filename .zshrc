@@ -17,6 +17,7 @@ antigen bundle arialdomartini/oh-my-git
 #Load third party plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle rimraf/k
+antigen bundle micha/resty
 
 #Install and configure Z
 antigen bundle rupa/z
