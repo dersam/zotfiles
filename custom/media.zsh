@@ -1,3 +1,4 @@
-rnext () {
-	rdio next && rdio current
-}
+# RIP rdio
+# rnext () {
+# 	rdio next && rdio current
+# }

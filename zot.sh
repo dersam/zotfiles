@@ -34,9 +34,6 @@ ln -vsfn ~/zotfiles/configs/.tmux.conf ~/
 ln -vsfn ~/zotfiles/configs/devenv.yml ~/.tmuxinator/
 echo -e "${RESET}"
 
-echo -e "Update danemacmillan dotfiles"
-pulldotfiles
-
 echo -e "Update path..."
 PATH=~/zotfiles/bin:$PATH
 

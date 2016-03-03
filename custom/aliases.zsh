@@ -1,8 +1,5 @@
 # .aliases
 
-# Make sure no other dotfiles script exists.
-unalias dotfiles 2&>/dev/null
-
 # Navigational
 #alias ll='ls --color -lah --group-directories-first'
 alias ll='k --all'
@@ -71,4 +68,3 @@ alias zot=". $HOME/zotfiles/zot.sh"
 #alias k="k --all --human"
 
 alias websearch="web_search google"
-
