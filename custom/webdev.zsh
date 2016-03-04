@@ -27,3 +27,10 @@ alias selbuild="docker run --rm --name=grid --add-host='develop.vagrant.dev:192.
 selvnc () {
 	open vnc://:hola@$(docker-machine ip default):5920
 }
+
+bm() {
+	for i in {0..10..1}
+		do
+			runtime=`(time wget $1 --no-check-certificate --delete-after -q --output-document=/dev/null)`
+		done
+}
