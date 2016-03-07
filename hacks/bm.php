@@ -1,4 +1,8 @@
 <?php
+if (!isset($argv[1])) {
+  die('No url provided.');
+}
+
 $cmd = "wget {$argv[1]} --no-check-certificate --delete-after -q --output-document=/dev/null";
 
 $avg = 0;
