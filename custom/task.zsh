@@ -18,6 +18,10 @@ th () {
 	task $1 stop
 }
 
+te () {
+	task $1 edit
+}
+
 tdep () {
 	task $1 modify depends:$2
 }
