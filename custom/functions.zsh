@@ -37,7 +37,7 @@ rr()
 # Grep for X in a directory
 grll ()
 {
-	ls --color -lah --group-directories-first | grep $@
+	ls --color -lah --group-directories-first | grep $1
 }
 
 ##
