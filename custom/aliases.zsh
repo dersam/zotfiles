@@ -1,8 +1,8 @@
 # .aliases
 
 # Navigational
-#alias ll='ls --color -lah --group-directories-first'
-alias ll='k --all'
+alias ll='ls --color -lah --group-directories-first'
+alias lp='k --all'
 alias llt='ls --color -laht --group-directories-first' # Sort by newest first.
 alias ..='cd ..'
 alias ...="cd ../.."

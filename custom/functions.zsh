@@ -34,6 +34,12 @@ rr()
 	fi
 }
 
+# Grep for X in a directory
+grll ()
+{
+	ls --color -lah --group-directories-first | grep $@
+}
+
 ##
 # Loop through all subdirectories and run the given command."
 loop()
