@@ -47,3 +47,7 @@ taskmux () {
 	tmux kill-session -t tasklist
 	tmuxinator start tasklist
 }
+
+ct () {
+	clear && task
+}
