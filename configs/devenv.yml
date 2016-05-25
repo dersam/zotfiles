@@ -41,3 +41,8 @@ windows:
         - cd ~/hack/magento
         - ssh vagrant
         - cd ~/hack
+  - mysql:
+      layout: main-horizontal
+      panes:
+        - cd ~
+        - mysql -h develop.vagrant.dev -u root
