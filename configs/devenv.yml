@@ -29,18 +29,24 @@ attach: true
 
 windows:
   - dev:
-      layout: tiled
+      layout: even-vertical
       panes:
-        - cd ~/hack/magento
-        - cd ~/hack
-        - cd ~/boxes/develop
         - cd ~
-  - test:
-      layout: d10d,204x63,0,0{100x63,0,0,1,103x63,101,0[103x31,101,0,5,103x31,101,32,6]}
-      panes:
-        - cd ~/hack/magento
-        - ssh vagrant
         - cd ~/hack
+        - cd ~/boxes/fortnine
+  #  - dev:
+  #    layout: tiled
+  #    panes:
+  #      - cd ~/hack/magento
+  #      - cd ~/hack
+  #      - cd ~/boxes/develop
+  #      - cd ~
+  #- test:
+  #    layout: d10d,204x63,0,0{100x63,0,0,1,103x63,101,0[103x31,101,0,5,103x31,101,32,6]}
+  #    panes:
+  #      - cd ~/hack/magento
+  #      - ssh vagrant
+  #      - cd ~/hack
   - mysql:
       layout: main-horizontal
       panes:
