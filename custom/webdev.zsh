@@ -35,20 +35,13 @@ selvnc () {
 # The vshell command is part of the VagrantShell repo located at
 # https://github.com/danemacmillan/vagrantshell
 #
-# @author Dane MacMillan <work@danemacmillan.com>
+# Adapted from danemacmillan dotfiles
 #
-_vshell()
+_vshell_completion()
 {
-	local cur prev opts
-	COMPREPLY=()
-	cur="${COMP_WORDS[COMP_CWORD]}"
-	prev="${COMP_WORDS[COMP_CWORD-1]}"
-	opts="help map restart update xdebug xhprof"
-
-	if [[ ${cur} == -* ]] ; then
-		COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
-		return 0
-	fi
+	local -a options
+	options=('help','map','restart','update','xdebug','xhprof')
+	_describe 'values' options
 }
 
-compdef _vshell vshell
+compdef _vshell_completion vshell
