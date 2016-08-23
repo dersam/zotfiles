@@ -40,7 +40,7 @@ selvnc () {
 _vshell_completion()
 {
 	local -a options
-	options=('help','map','restart','update','xdebug','xhprof')
+	options=('help' 'map' 'restart' 'update' 'xdebug' 'xhprof')
 	_describe 'values' options
 }
 
