@@ -12,7 +12,7 @@ alias .....="cd ../../../.."
 
 # Filesystem
 alias rm='rm -rf'
-alias cp="cp -r"
+alias cp="cp -a"
 alias mkdir="mkdir -pv"
 alias du="du -h --time"
 alias grep='grep --color=auto'
