@@ -2,6 +2,6 @@ weather () {
   curl wttr.in/$1
 }
 
-internet\? () {
+internet! () {
 	ping -c 2 google.com
 }
