@@ -20,11 +20,11 @@ antigen bundle rimraf/k
 antigen bundle micha/resty
 
 #Install and configure Z
-antigen bundle rupa/z
-add-zsh-hook precmd _z_precmd
-function _z_precmd {
-	_z --add "$PWD"
-}
+#antigen bundle rupa/z
+#add-zsh-hook precmd _z_precmd
+#function _z_precmd {
+#	_z --add "$PWD"
+#}
 
 #Add themes
 antigen theme dersam/staples staples
