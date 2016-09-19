@@ -13,7 +13,13 @@ alias .....="cd ../../../.."
 # Filesystem
 alias rm='rm -rf'
 alias cp="cp -a"
-alias mkdir="mkdir -pv"
+# DO NOT EVER ALIAS mkdir with -p parents option. IT WILL BREAK INHERITED ACL
+# PERMISSIONS.
+# http://serverfault.com/questions/197263/conflicts-between-acls-and-umask
+# http://savannah.gnu.org/bugs/?19546
+# http://debbugs.gnu.org/cgi/bugreport.cgi?bug=14371
+# dane's pain is your gain
+#alias mkdir="mkdir -p"
 alias du="du -h --time"
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
