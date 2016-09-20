@@ -14,10 +14,6 @@ export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 
 # Aliases
 
-# Depends on Firefox Tools Adapter: https://developer.mozilla.org/en-US/docs/Tools/Firefox_Tools_Adapter
-# TODO: Add checking.
-alias debugios='open  /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app; sleep 2s; ios_webkit_debug_proxy'
-
 alias show='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hide='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias stfu="osascript -e 'set volume output muted true'"
