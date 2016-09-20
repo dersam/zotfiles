@@ -16,7 +16,7 @@ fi
 touch ~/extra.zsh
 
 echo -e "${BLUE}${BOLD}Checking for updates...${RESET}"
-cd ~/zotfiles && git pull
+cd ~/zotfiles && git stash && git pull && git stash pop
 antigen update
 antigen selfupdate
 
