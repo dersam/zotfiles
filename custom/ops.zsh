@@ -1,25 +1,65 @@
-#!/usr/bin/env bash
+#Network
+#alias listen='lsof -i -P | grep LISTEN'
+alias listen='lsof -Pnl +M -i4'
+alias nsp='netstat -tulpn'
+alias ss='lsof -i'
+alias ipp="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+alias vs="vagrant global-status --prune"
+# See http://ipinfo.io/developers for more info.
+alias ipgeo="curl ipinfo.io"
+alias vmt="/usr/bin/vmware-toolbox-cmd"
 
-## .functions
+# Server
+# Get the number of php-fpm processes, and their average size in MB.
+#alias fpmstat='ps aux | grep php-fpm | wc -l ; ps --no-headers -o "rss,cmd" -C php-fpm | awk '{ sum+=$1 } END { printf ("%d%s\n", sum/NR/1024,"M") }'
+alias fpmstat="ps aux | grep php-fpm | wc -l ; ps --no-headers -o \"rss,cmd\" -C php-fpm | awk '{ sum+=\$1 } END { printf (\"%d%s\n\", sum/NR/1024,\"M\") }'"
+
+#Images
+crunch () {
+  case $1 in
+    png)
+      pngquant --ext=-optimized.png --quality=40-60 *.png
+      ;;
+    *)
+      echo "$1 is not a valid option"
+  esac
+}
+
+#Redis
+startredis() {
+	redis-server /usr/local/etc/redis.conf
+}
+
+#Docker
+alias makedocker="docker-machine create --driver=parallels --parallels-memory=4000 default && dockenv"
+
+alias dockerup="docker-machine start default"
+
+alias selbuild="docker run --rm --name=grid --add-host='develop.vagrant.dev:192.168.80.80' -p 4444:24444 -p 5920:25900 \
+  -v /dev/shm:/dev/shm -e VNC_PASSWORD=hola elgalu/selenium:2.51.0b"
+
+selvnc () {
+	open vnc://:hola@$(docker-machine ip default):5920
+}
+
 
 ##
-# Calculate MD5 hashes regardless of tool, and ensure identical output.
-calculate_md5_hash()
+# Custom completion for vshell command.
+#
+# The vshell command is part of the VagrantShell repo located at
+# https://github.com/danemacmillan/vagrantshell
+#
+# Adapted from danemacmillan dotfiles
+#
+_vshell_completion()
 {
-	local md5tool=md5sum
-	local cut_offset=1
-
-	# OSX comes with md5 tool by default, not md5sum.
-	if hash md5 2>/dev/null; then
-		local md5tool=md5
-		local cut_offset=4
-	fi
-
-	local file_path="$1"
-	if [[ -f $file_path ]]; then
-		echo $($md5tool $file_path | cut -d " " -f$cut_offset)
-	fi
+	local -a options
+	options=('help' 'map' 'restart' 'update' 'xdebug' 'xhprof')
+	_describe 'values' options
 }
+
+compdef _vshell_completion vshell
 
 ##
 # Remotely run commands with color TTY. If passing chained commands (&&),
@@ -83,14 +123,6 @@ rrmy()
 {
 	ssh -T -pPORT USERNAME@SERVER "mysql -u USERNAME -pPASSWORD -Bs" < "cool.sql" > output.txt
 	# Or if no script to execute, use -Bse.
-}
-
-##
-# Merge all canonical branches from current directory.
-choochoo()
-{
-	echo -e "${BLUE}${BOLD}Running a train on this repo. Hiyoooo!${RESET}"
-	git checkout develop && git pull && git checkout stage && git pull && git merge develop && git push && git checkout master && git pull && git merge stage && git push && git checkout develop && echo -e "All canonical branches merged up to master."
 }
 
 ##
@@ -259,52 +291,6 @@ newsshkey()
 	fi
 }
 
-##
-# Find all Magento events in current path or path provided.
-magevents()
-{
-	if hash ag 2>/dev/null ; then
-		local magento_path=""
-		if [[ -n "$1" ]]; then
-			magento_path="$1"
-			ag --php -A 5 -C 0 --depth 50 -f -i "Mage::dispatchEvent" "$magento_path"
-		else
-			echo "Provide path to search for Magento events."
-		fi
-	else
-		echo "ag / silver_searcher is required."
-	fi
-}
-
-## TODO function for finding files then passing command
-##find ./ -type f -size 0 -exec cp {} ~/linusmedia0 \; -exec echo {} >> ~/linusmedia0/0size.txt \;
-#fff()
-#{
-#	local file_path="$1"
-#	local exec_argument="$2"
-#
-#
-#	if [[ -n "$file_path" && -n "$exec_argument" && -f "$file_path"]]; then
-#		find . -name $1 -exec $exec_argument
-#	fi
-#
-#
-#}
-
-# From https://twitter.com/climagic/status/370595711483514880
-# Example: git push origin master -f || fliptable
-fliptable()
-{
-	echo "（╯°□°）╯ ┻━┻";
-}
-
-ultraflip()
-{
-	echo " ┻━┻ ︵╰(°□°)╯︵ ┻━┻";
-}
-
-# From Kenorb
-
 # Find file
 # Usage: ff (file)
 ff()
@@ -319,20 +305,20 @@ ft()
   find . -name "$2" -exec grep -il "$1" {} \;
 }
 
-#http://www.paradox.io/posts/9-my-new-zsh-prompt
-function calc_elapsed_time() {
-	local timer_result=$1
-  if [[ $timer_result -ge 3600 ]]; then
-    let "timer_hours = $timer_result / 3600"
-    let "remainder = $timer_result % 3600"
-    let "timer_minutes = $remainder / 60"
-    let "timer_seconds = $remainder % 60"
-    print -P "%B%F{yellow}${timer_hours}h${timer_minutes}m${timer_seconds}s%b"
-  elif [[ $timer_result -ge 60 ]]; then
-    let "timer_minutes = $timer_result / 60"
-    let "timer_seconds = $timer_result % 60"
-    print -P "%B%F{yellow}${timer_minutes}m${timer_seconds}s%b"
-  elif [[ $timer_result -gt 10 ]]; then
-    print -P "%B%F{yellow}${timer_result}s%b"
-  fi
+# Calculate MD5 hashes regardless of tool, and ensure identical output.
+calculate_md5_hash()
+{
+	local md5tool=md5sum
+	local cut_offset=1
+
+	# OSX comes with md5 tool by default, not md5sum.
+	if hash md5 2>/dev/null; then
+		local md5tool=md5
+		local cut_offset=4
+	fi
+
+	local file_path="$1"
+	if [[ -f $file_path ]]; then
+		echo $($md5tool $file_path | cut -d " " -f$cut_offset)
+	fi
 }
