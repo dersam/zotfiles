@@ -318,3 +318,21 @@ ft()
 {
   find . -name "$2" -exec grep -il "$1" {} \;
 }
+
+#http://www.paradox.io/posts/9-my-new-zsh-prompt
+function calc_elapsed_time() {
+	local timer_result=$1
+  if [[ $timer_result -ge 3600 ]]; then
+    let "timer_hours = $timer_result / 3600"
+    let "remainder = $timer_result % 3600"
+    let "timer_minutes = $remainder / 60"
+    let "timer_seconds = $remainder % 60"
+    print -P "%B%F{yellow}${timer_hours}h${timer_minutes}m${timer_seconds}s%b"
+  elif [[ $timer_result -ge 60 ]]; then
+    let "timer_minutes = $timer_result / 60"
+    let "timer_seconds = $timer_result % 60"
+    print -P "%B%F{yellow}${timer_minutes}m${timer_seconds}s%b"
+  elif [[ $timer_result -gt 10 ]]; then
+    print -P "%B%F{yellow}${timer_result}s%b"
+  fi
+}
