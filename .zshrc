@@ -1,3 +1,4 @@
+skip_global_compinit=1
 source ~/antigen/antigen.zsh
 
 #Load oh-my-zsh and standard plugins
