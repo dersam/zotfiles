@@ -4,7 +4,7 @@
 # Merge all canonical branches from current directory.
 choochoo()
 {
-	echo -e "\xf0\x9f\x9a\x82\xf0\x9f\x9a\x83\xf0\x9f\x9a\x83\xf0\x9f\x9a\x83\xf0\x9f\x9a\x83"
+	echo -e "\xf0\x9f\x9a\x82 \xf0\x9f\x9a\x83 \xf0\x9f\x9a\x83 \xf0\x9f\x9a\x83 \xf0\x9f\x9a\x83"
 	git checkout develop && git pull && git checkout stage && git pull && git merge develop && git push && git checkout master && git pull && git merge stage && git push && git checkout develop && echo -e "All canonical branches merged up to master."
 }
 
