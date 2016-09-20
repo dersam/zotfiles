@@ -1,3 +1,4 @@
+#skipping this speeds up load time a bit
 skip_global_compinit=1
 source ~/antigen/antigen.zsh
 
