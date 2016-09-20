@@ -11,7 +11,6 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # Filesystem
-alias rm='rm -rf'
 alias cp="cp -a"
 # DO NOT EVER ALIAS mkdir with -p parents option. IT WILL BREAK INHERITED ACL
 # PERMISSIONS.
@@ -50,19 +49,6 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 #alias fpmstat='ps aux | grep php-fpm | wc -l ; ps --no-headers -o "rss,cmd" -C php-fpm | awk '{ sum+=$1 } END { printf ("%d%s\n", sum/NR/1024,"M") }'
 alias fpmstat="ps aux | grep php-fpm | wc -l ; ps --no-headers -o \"rss,cmd\" -C php-fpm | awk '{ sum+=\$1 } END { printf (\"%d%s\n\", sum/NR/1024,\"M\") }'"
 
-# Git
-# just for reference. Do not rewrite history.
-#alias grewritelast='GIT_COMMITTER_DATE="$(date -d \'24 hours ago\')" git commit --amend --date "$(date -d \'24 hours ago\')" && git push --force'
-alias gco="git checkout"
-alias gp="git pull"
-alias gpp="git push"
-alias gc="git commit"
-
-# Mitigate fat-fingering and other retardations.
-alias gut="git"
-alias kk="ll"
-alias fuck='$(thefuck $(fc -ln -1))'
-
 # History
 # Purge all history
 alias historypurgeall='cat /dev/null > ~/.bash_history && history -c && history -w'
@@ -70,8 +56,3 @@ alias historypurgeall='cat /dev/null > ~/.bash_history && history -c && history 
 alias historypurgelast='history -d $((HISTCMD-2)) && history -d $((HISTCMD-1))'
 
 alias zot=". $HOME/zotfiles/zot.sh"
-
-#Alias defaults for k
-#alias k="k --all --human"
-
-alias websearch="web_search google"
