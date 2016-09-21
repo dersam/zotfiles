@@ -8,6 +8,10 @@ if [[ -f $HOME/.pigrc ]]; then
 	source ~/.pigrc
 fi
 
+if [[ -n "$SSH_CLIENT" ]]; then
+	DISABLE_UNTRACKED_FILES_DIRTY='true'
+fi
+
 # Navigational
 #alias ll='ls --color -lah --group-directories-first'
 alias ll='ls --color -lah --group-directories-first '
