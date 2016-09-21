@@ -322,3 +322,8 @@ calculate_md5_hash()
 		echo $($md5tool $file_path | cut -d " " -f$cut_offset)
 	fi
 }
+
+get_hex ()
+{
+  echo $1 | hexdump
+}
