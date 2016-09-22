@@ -32,6 +32,12 @@ shownames(){
 	git show $1 --name-only
 }
 
+## GitKraken
+## Open GitKraken using the current repo directory.
+kraken () {
+	~/Applications/GitKraken.app/Contents/MacOS/GitKraken -p $(pwd)
+}
+
 #MySQL
 alias mysql="mycli"
 export DEV_DB_NAME="develop"
