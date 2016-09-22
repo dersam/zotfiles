@@ -101,6 +101,8 @@ ct () {
 	clear && task
 }
 
+export EVENT_NOKQUEUE=1
+
 # TMUX
 shmux () {
 	case $1 in
