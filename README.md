@@ -9,6 +9,12 @@ Any configs that already exist that match a dotfile that zot wants to link will
 be obliterated. Use with caution- the list of symlinks begins at "Symlinking Configs"
 in `zot.sh`.
 
+# Features
+* Auto-update and installation with `zot.sh`
+* Custom configs for tmux using tmuxinator.
+* Special bin directory for custom scripts
+* Automatic downloader for scripts stored as github gists, placing them in the $PATH
+
 #Installation
 * Run zot.sh (it will alias itself to `zot` after the first run).
 * Zot will overwrite anything that it wants to symlink (such as gitconfig).
