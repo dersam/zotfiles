@@ -29,3 +29,4 @@ antigen bundle $HOME/zotfiles/custom --no-local-clone
 antigen apply
 
 source ~/extra.zsh
+#source ~/zotfiles/bin/gist/weatherfunk.zsh
