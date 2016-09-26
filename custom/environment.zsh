@@ -85,3 +85,9 @@ alias update='zot; composer selfupdate; softwareupdate -i -a --verbose; brew doc
 #defaults write NSGlobalDomain KeyRepeat -int 1
 ;;
 esac
+
+setopt inc_append_history share_history
+bindkey '\eOA' history-beginning-search-backward
+bindkey '\e[A' history-beginning-search-backward
+bindkey '\eOB' history-beginning-search-forward
+bindkey '\e[B' history-beginning-search-forward
