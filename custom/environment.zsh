@@ -82,7 +82,9 @@ alias update='zot; composer selfupdate; softwareupdate -i -a --verbose; brew doc
 # OSX settings
 #defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
 # Faster keyboard repeat rate
-#defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
 ;;
 esac
 
