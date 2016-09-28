@@ -1,3 +1,9 @@
+###############
+# gister.zsh
+#
+# Fetch scripts stored as github gists and make them available in the path.
+##############3
+
 mkdir -p $HOME/zotfiles/bin/gist
 
 # Add custom bin directory

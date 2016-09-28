@@ -1,3 +1,9 @@
+#############
+# ops.zsh
+#
+# Things related to running servers and containers go here.
+##############
+
 #Network
 #alias listen='lsof -i -P | grep LISTEN'
 alias listen='lsof -Pnl +M -i4'

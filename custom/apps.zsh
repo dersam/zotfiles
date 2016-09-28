@@ -1,3 +1,9 @@
+###########
+#apps.zsh
+#
+# Contains customizations and shortcuts for various applications.
+###########
+
 # Git
 
 ##

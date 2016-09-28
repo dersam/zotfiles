@@ -1,3 +1,9 @@
+##############
+# environment.zsh
+#
+# Items related to navigation and working in the terminal.
+###############
+
 #Environment variables
 export PATH=/usr/local/sbin:~/npm-global/bin:$PATH
 export EDITOR="vim"
