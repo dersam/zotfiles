@@ -3,6 +3,9 @@ export PATH=/usr/local/sbin:~/npm-global/bin:$PATH
 export EDITOR="vim"
 export DISABLE_AUTO_TITLE=true
 
+# Alias the updater script
+alias zot=". $HOME/zotfiles/zot.sh"
+
 # you should really do something with pig maybe
 if [[ -f $HOME/.pigrc ]]; then
 	source ~/.pigrc
@@ -44,21 +47,11 @@ alias c='clear'
 alias vi='vim'
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
-# History
-# Purge all history
-alias historypurgeall='cat /dev/null > ~/.bash_history && history -c && history -w'
-# Source: http://thoughtsbyclayg.blogspot.ca/2008/02/how-to-delete-last-command-from-bash.html
-alias historypurgelast='history -d $((HISTCMD-2)) && history -d $((HISTCMD-1))'
-
-alias zot=". $HOME/zotfiles/zot.sh"
-
-#Useful OSX Stuff
+#Anything that is specific to the OSX environment should go here.
 export ZSH_HOST_OS=$(uname | awk '{print tolower($0)}')
 
 case $ZSH_HOST_OS in
 	darwin*)
-
-# Exports
 
 # Assumes that coreutils and other GNU tools have replaced OSX'
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
@@ -82,6 +75,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10
 ;;
 esac
 
+# Recursive history search on up arrow.
 setopt inc_append_history share_history
 bindkey '\eOA' history-beginning-search-backward
 bindkey '\e[A' history-beginning-search-backward
