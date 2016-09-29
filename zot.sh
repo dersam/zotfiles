@@ -45,6 +45,11 @@ if [ ! -d ~"/.vim/bundle/Vundle.vim" ]; then
 fi
 #vim +PluginInstall +qall
 
+echo -e "Configuring tmux..."
+if [ ! -d ~"/.tmux/plugins/tpm" ]; then
+	git clone git@github.com:tmux-plugins/tpm.git ~/.tmux/plugins/tpm
+fi
+
 echo -e "Reloading zotfiles..."
 source $HOME/.zshrc
 
