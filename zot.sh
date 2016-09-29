@@ -26,7 +26,6 @@ ln -vsfn ~/zotfiles/.zshrc ~/.zshrc
 echo -e "Symlinking configs..."
 ln -vsfn ~/zotfiles/configs/.gitconfig ~/
 ln -vsfn ~/zotfiles/configs/.gitignore ~/
-ln -vsfn ~/zotfiles/configs/.vimperatorrc ~/
 ln -vsfn ~/zotfiles/configs/.my.cnf ~/
 ln -vsfn ~/zotfiles/configs/.grcat ~/
 ln -vsfn ~/zotfiles/configs/.myclirc ~/
@@ -44,7 +43,7 @@ echo -e "Update Vim Vundles..."
 if [ ! -d ~"/.vim/bundle/Vundle.vim" ]; then
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
-vim +PluginInstall +qall
+#vim +PluginInstall +qall
 
 echo -e "Reloading zotfiles..."
 source $HOME/.zshrc
