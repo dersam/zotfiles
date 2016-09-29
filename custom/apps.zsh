@@ -38,6 +38,10 @@ shownames(){
 	git show $1 --name-only
 }
 
+cleanremotes(){
+	git fetch origin -p && git fetch composer -p
+}
+
 ## GitKraken
 ## Open GitKraken using the current repo directory.
 kraken () {
