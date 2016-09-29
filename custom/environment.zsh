@@ -77,8 +77,6 @@ alias update='zot; composer selfupdate; softwareupdate -i -a --verbose; brew doc
 # Faster keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
-# Disable character suggestions for accents, etc
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 ;;
 esac
@@ -89,5 +87,3 @@ bindkey '\eOA' history-beginning-search-backward
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\eOB' history-beginning-search-forward
 bindkey '\e[B' history-beginning-search-forward
-
-ZSH_AUTOSUGGEST_STRATEGY='match_prev_cmd'

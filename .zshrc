@@ -19,7 +19,6 @@ antigen bundle n98-magerun
 
 #Load third party plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
 
 #Add themes
 antigen theme dersam/staples staples
