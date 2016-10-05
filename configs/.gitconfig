@@ -45,7 +45,7 @@
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
-	branches = branch -a
+	branches = branch -av
 	remotes = remote -v
 
 	# Amend the currently staged files to the latest commit
