@@ -33,6 +33,8 @@ alias .....="cd ../../../.."
 
 # Filesystem
 alias cp="cp -a"
+alias rm="rm -rf"
+
 # DO NOT EVER ALIAS mkdir with -p parents option. IT WILL BREAK INHERITED ACL
 # PERMISSIONS.
 # http://serverfault.com/questions/197263/conflicts-between-acls-and-umask
