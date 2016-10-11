@@ -36,3 +36,8 @@ magevents()
 		echo "ag / silver_searcher is required."
 	fi
 }
+
+binary ()
+{
+	echo "obase=2;$1" | bc
+}
