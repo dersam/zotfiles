@@ -12,6 +12,12 @@ export DISABLE_AUTO_TITLE=true
 # Alias the updater script
 alias zot=". $HOME/zotfiles/zot.sh"
 
+# Assumes that coreutils and other GNU tools have replaced OSX'
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
+export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+
+
 # you should really do something with pig maybe
 if [[ -f $HOME/.pigrc ]]; then
 	source ~/.pigrc
@@ -23,9 +29,10 @@ fi
 
 # Navigational
 #alias ll='ls --color -lah --group-directories-first'
-alias ll='ls --color -lah --group-directories-first '
+alias ls='gls --color=auto'
+alias ll='ls --color=auto -lah --group-directories-first '
 alias lp='k --all'
-alias llt='ls --color -laht --group-directories-first' # Sort by newest first.
+alias llt='ls --color=auto -laht --group-directories-first' # Sort by newest first.
 alias ..='cd ..'
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -61,11 +68,6 @@ export ZSH_HOST_OS=$(uname | awk '{print tolower($0)}')
 case $ZSH_HOST_OS in
 	darwin*)
 
-# Assumes that coreutils and other GNU tools have replaced OSX'
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
-export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
-
 # Aliases
 alias stfu="osascript -e 'set volume output muted true'"
 #alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
@@ -89,3 +91,6 @@ bindkey '\eOA' history-beginning-search-backward
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\eOB' history-beginning-search-forward
 bindkey '\e[B' history-beginning-search-forward
+
+dircolorrc=~/dircolors
+eval "$(dircolors $dircolorrc)"
