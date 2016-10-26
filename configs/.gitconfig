@@ -7,6 +7,9 @@
 
 [alias]
 
+	# Prune deleted remote branches and delete local merged branches
+	purge = !"git fetch --all -p && git branch --merged | grep -v develop | grep -v stage | grep -v master | xargs -n 1 git branch -d"
+
 	# Append any staged files onto the most recent commit.
 	commend = commit --amend --no-edit
 
