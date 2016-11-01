@@ -34,6 +34,11 @@ clastn () {
 	git checkout @{-$1}
 }
 
+mergedev () {
+	echo -e "Merging develop into your current branch  \xe2\x9a\xa1"
+	cdevelop && git pull && clast && git merge develop
+}
+
 shownames(){
 	git show $1 --name-only
 }
