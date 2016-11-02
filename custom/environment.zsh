@@ -57,6 +57,11 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 #alias ag='ag -lfi --hidden --numbers --column --stats'
 alias belinux="find . -type f -exec dos2unix {} \;"
 
+#Search all files in current directory for terminal
+gimme () {
+	grep -HrnIi --color=always $1 .
+}
+
 # Misc
 alias c='clear'
 alias vi='vim'
