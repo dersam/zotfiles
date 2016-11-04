@@ -39,6 +39,11 @@ mergedev () {
 	cdevelop && git pull && clast && git merge develop
 }
 
+intodev () {
+	echo -e "Merging current branch into develop  \xe2\x9a\xa1"
+	cdevelop && git pull && git merge @{-1}
+}
+
 shownames(){
 	git show $1 --name-only
 }
