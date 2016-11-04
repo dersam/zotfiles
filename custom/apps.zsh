@@ -34,12 +34,12 @@ clastn () {
 	git checkout @{-$1}
 }
 
-mergedev () {
+getdev () {
 	echo -e "Merging develop into your current branch  \xe2\x9a\xa1"
 	cdevelop && git pull && clast && git merge develop
 }
 
-intodev () {
+todev () {
 	echo -e "Merging current branch into develop  \xe2\x9a\xa1"
 	cdevelop && git pull && git merge @{-1}
 }
