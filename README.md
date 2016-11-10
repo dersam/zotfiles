@@ -19,7 +19,7 @@ in `zot.sh`.
 * Default theme is https://github.com/dersam/staples
 
 #Installation
-* If you're not using zsh, make sure it's installed and you have switched to it (chsh).
+* If you're not using zsh, make sure it's installed and you have switched to it. `chsh -s $(which zsh)`
 * Run zot.sh (it will alias itself to `zot` after the first run).
 * Zot will overwrite anything that it wants to symlink (such as gitconfig).
 * Running zot will update both the local repo, and the antigen repos.
