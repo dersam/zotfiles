@@ -29,7 +29,6 @@ fi
 
 # Navigational
 #alias ll='ls --color -lah --group-directories-first'
-alias ls='gls --color=auto'
 alias ll='ls --color=auto -lah --group-directories-first '
 alias lp='k --all'
 alias llt='ls --color=auto -laht --group-directories-first' # Sort by newest first.
@@ -72,6 +71,8 @@ export ZSH_HOST_OS=$(uname | awk '{print tolower($0)}')
 
 case $ZSH_HOST_OS in
 	darwin*)
+
+alias ls='gls --color=auto'
 
 # Aliases
 alias stfu="osascript -e 'set volume output muted true'"
