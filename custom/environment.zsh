@@ -100,3 +100,5 @@ bindkey '\e[B' history-beginning-search-forward
 
 dircolorrc=~/dircolors
 eval "$(dircolors $dircolorrc)"
+
+alias npms='npm -s'
