@@ -44,6 +44,12 @@ todev () {
 	cdevelop && git pull && git merge @{-1}
 }
 
+inflict () {
+	getdev
+	todev
+	git push
+}
+
 shownames(){
 	git show $1 --name-only
 }
