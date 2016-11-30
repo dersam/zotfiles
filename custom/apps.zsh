@@ -45,7 +45,7 @@ todev () {
 }
 
 inflict () {
-	cdevelop && git pull && clast && git merge develop && cdevelop && git merge @{-1} && git push
+	cdevelop && git pull && clast && git merge develop && cdevelop && git merge @{-1} && git push && clast
 }
 
 shownames(){
