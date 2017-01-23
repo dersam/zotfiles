@@ -26,3 +26,9 @@ Needs to be run in every open terminal.
 ## fix the session crashing after the first command after `zot`
 Did you reinstall the zsh-users/autosuggestions module? It breaks your terminal
 every time stop trying to use it you don't even like it.
+
+## slow git prompt in vm
+if [[ -d "/vagrant" ]]; then
+	export GIT_PS1_SHOWDIRTYSTATE=
+	export GIT_PS1_SHOWUNTRACKEDFILES=
+fi
