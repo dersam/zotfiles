@@ -13,8 +13,6 @@ export DISABLE_AUTO_TITLE=true
 alias zot=". $HOME/zotfiles/zot.sh"
 
 # Assumes that coreutils and other GNU tools have replaced OSX'
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
 export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 
 
@@ -72,6 +70,8 @@ export ZSH_HOST_OS=$(uname | awk '{print tolower($0)}')
 case $ZSH_HOST_OS in
 	darwin*)
 
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
 alias ls='gls --color=auto'
 
 # Aliases
