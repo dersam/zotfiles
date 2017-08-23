@@ -18,7 +18,7 @@ in `zot.sh`.
 * Automatic downloader for scripts stored as github gists, placing them in the $PATH
 * Default theme is https://github.com/dersam/staples
 
-#Installation
+# Installation
 * If you're not using zsh, make sure it's installed and you have switched to it. `chsh -s $(which zsh)`
 * Run zot.sh (it will alias itself to `zot` after the first run).
 * Zot will overwrite anything that it wants to symlink (such as gitconfig).
