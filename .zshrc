@@ -8,13 +8,8 @@ antigen bundle git
 antigen bundle osx
 antigen bundle brew
 antigen bundle git-extras
-antigen bundle node
-antigen bundle npm
 antigen bundle composer
 antigen bundle sudo
-antigen bundle wd
-antigen bundle taskwarrior
-antigen bundle colored-man-pages
 antigen bundle n98-magerun
 
 #Load third party plugins
