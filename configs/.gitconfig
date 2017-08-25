@@ -158,15 +158,15 @@
 
 	# Detect copies as well as renames
 	renames = copies
-	tool = Kaleidoscope
+	# tool = Kaleidoscope
 
-[difftool]
+# [difftool]
 
-	prompt = false
+# 	prompt = false
 
-[difftool "Kaleidoscope"]
+# [difftool "Kaleidoscope"]
 
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+# 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [help]
 
