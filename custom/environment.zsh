@@ -70,23 +70,23 @@ export ZSH_HOST_OS=$(uname | awk '{print tolower($0)}')
 case $ZSH_HOST_OS in
 	darwin*)
 
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
-alias ls='gls --color=auto'
+	export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+	export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
+	alias ls='gls --color=auto'
 
-# Aliases
-alias stfu="osascript -e 'set volume output muted true'"
-#alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
-alias flushdns="dscacheutil -flushcache"
-#alias update='dotfiles; sudo softwareupdate -i -a -v; brew doctor; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update'
-alias update='zot; composer selfupdate; softwareupdate -i -a --verbose; brew doctor; brew update; brew upgrade; brew cleanup; npm update -g'
+	# Aliases
+	alias stfu="osascript -e 'set volume output muted true'"
+	#alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
+	alias flushdns="dscacheutil -flushcache"
+	#alias update='dotfiles; sudo softwareupdate -i -a -v; brew doctor; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update'
+	alias update='zot; composer selfupdate; softwareupdate -i -a --verbose; brew doctor; brew update; brew upgrade; brew cleanup; npm update -g'
 
 
-# OSX settings
-#defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
-# Faster keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 12
+	# OSX settings
+	#defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
+	# Faster keyboard repeat rate
+	defaults write NSGlobalDomain KeyRepeat -int 1
+	defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
 ;;
 esac
