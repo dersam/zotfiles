@@ -174,21 +174,21 @@
 	# you enjoy pain.
 	autocorrect = 0
 
-[merge]
+# [merge]
 
-	# Include summaries of merged commits in newly created merge commit messages
-	log = true
-	tool = Kaleidoscope
+# 	# Include summaries of merged commits in newly created merge commit messages
+# 	log = true
+# 	tool = Kaleidoscope
 
-[mergetool]
+# [mergetool]
 
-	keepBackup = false
-	prompt = false
+# 	keepBackup = false
+# 	prompt = false
 
-[mergetool "Kaleidoscope"]
+# [mergetool "Kaleidoscope"]
 
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustexitcode = true
+# 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+# 	trustexitcode = true
 
 [push]
 
