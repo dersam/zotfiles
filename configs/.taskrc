@@ -29,7 +29,7 @@ data.location=~/.task
 #include /usr/local/Cellar/task/2.4.4/share/doc/task/rc/solarized-light-256.theme
 #include /usr/local/Cellar/task/2.4.4/share/doc/task/rc/no-color.theme
 
-include /Users/samuelschmidt/zotfiles/configs/solarized.theme
+include ~/zotfiles/configs/solarized.theme
 uda.priority.values=H,M,,L
 urgency.uda.priority.L.coefficient=-2.0
 
