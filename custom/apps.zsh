@@ -5,17 +5,17 @@
 ###########
 
 # Git
-
+export DEV_BRANCH_NAME='dev'
 ##
 # Merge all canonical branches from current directory.
 choochoo()
 {
 	echo -e "\xf0\x9f\x9a\x82 \xf0\x9f\x9a\x83 \xf0\x9f\x9a\x83 \xf0\x9f\x9a\x83 \xf0\x9f\x9a\x83"
-	git checkout develop && git pull && git checkout stage && git pull && git merge develop && git push && git checkout master && git pull && git merge stage && git push && git checkout develop && echo -e "All canonical branches merged up to master."
+	git checkout $DEV_BRANCH_NAME && git pull && git checkout stage && git pull && git merge $DEV_BRANCH_NAME && git push && git checkout master && git pull && git merge stage && git push && git checkout $DEV_BRANCH_NAME && echo -e "All canonical branches merged up to master."
 }
 
 cdevelop () {
-	git checkout develop
+	git checkout $DEV_BRANCH_NAME
 }
 
 cstage () {
@@ -36,7 +36,7 @@ clastn () {
 
 getdev () {
 	echo -e "Merging develop into your current branch  \xe2\x9a\xa1"
-	cdevelop && git pull && clast && git merge develop
+	cdevelop && git pull && clast && git merge $DEV_BRANCH_NAME
 }
 
 todev () {
@@ -45,7 +45,7 @@ todev () {
 }
 
 inflict () {
-	cdevelop && git pull && clast && git merge develop && cdevelop && git merge @{-1} && git push && clast
+	cdevelop && git pull && clast && git merge $DEV_BRANCH_NAME && cdevelop && git merge @{-1} && git push && clast
 }
 
 shownames(){
