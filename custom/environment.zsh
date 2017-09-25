@@ -79,7 +79,7 @@ case $ZSH_HOST_OS in
 	#alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
 	alias flushdns="dscacheutil -flushcache"
 	#alias update='dotfiles; sudo softwareupdate -i -a -v; brew doctor; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update'
-	alias update='zot; composer selfupdate; softwareupdate -i -a --verbose; brew doctor; brew update; brew upgrade; brew cleanup; npm update -g'
+	alias update='zot; composer selfupdate; softwareupdate -i -a --verbose; brew doctor; brew update; brew upgrade; brew cleanup'
 
 
 	# OSX settings
