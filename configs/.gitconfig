@@ -91,6 +91,8 @@
 		fi \
 	}; f"
 
+	detrack = "git branch -d -r origin/$1"
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
