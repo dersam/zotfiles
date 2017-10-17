@@ -92,7 +92,7 @@
 	}; f"
 
 	detrack = "git branch -d -r origin/$1"
-	pushf = push --force-with-lease
+	forcepush = push --force-with-lease
 
 [apply]
 
