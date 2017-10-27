@@ -9,7 +9,7 @@ source ~/zotfiles/custom/formatting.zsh
 if [[ ! -d $HOME/antigen ]]; then
 	echo -e "Antigen not found, installing..."
 	cd $HOME
-	git clone git@github.com:zsh-users/antigen.git
+	git clone https://github.com/zsh-users/antigen.git
 	cd -
 fi
 
@@ -48,7 +48,7 @@ fi
 
 echo -e "Configuring tmux..."
 if [ ! -d ~"/.tmux/plugins/tpm" ]; then
-	git clone git@github.com:tmux-plugins/tpm.git ~/.tmux/plugins/tpm
+	git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 fi
 
 echo -e "Reloading zotfiles..."
