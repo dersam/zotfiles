@@ -23,6 +23,12 @@ exec zsh
 ```
 Needs to be run in every open terminal.
 
+Missing backups or swaps?
+```
+mkdir ~/.vim/backups
+mkdir ~/.vim/swaps
+```
+
 ## fix the session crashing after the first command after `zot`
 Did you reinstall the zsh-users/autosuggestions module? It breaks your terminal
 every time stop trying to use it you don't even like it.
