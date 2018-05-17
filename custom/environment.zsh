@@ -5,7 +5,7 @@
 ###############
 
 #Environment variables
-export PATH=/usr/local/sbin:~/npm-global/bin:$PATH
+export PATH=.:/usr/local/sbin:~/npm-global/bin:$PATH
 export EDITOR="vim"
 export DISABLE_AUTO_TITLE=true
 
