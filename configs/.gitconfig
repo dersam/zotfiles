@@ -91,7 +91,7 @@
 		fi \
 	}; f"
 
-	detrack = "git branch -d -r origin/$1"
+	detrack = "branch -d -r origin/$1"
 	forcepush = push --force-with-lease
 
 [apply]
@@ -128,7 +128,7 @@
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
 	pager = cat
-	excludesfile = /Users/samuelschmidt/.gitignore
+	excludesfile = /Users/sam/.gitignore_global
 
 # Colors http://nathanhoad.net/how-to-colours-in-git
 
