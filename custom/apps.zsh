@@ -14,6 +14,10 @@ choochoo()
 	git checkout $DEV_BRANCH_NAME && git pull && git checkout stage && git pull && git merge $DEV_BRANCH_NAME && git push && git checkout master && git pull && git merge stage && git push && git checkout $DEV_BRANCH_NAME && echo -e "All canonical branches merged up to master."
 }
 
+crel () {
+	git checkout rel-1.$1.0
+}
+ 
 cdevelop () {
 	git checkout $DEV_BRANCH_NAME
 }
