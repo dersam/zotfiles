@@ -207,3 +207,5 @@
 	process = git-lfs filter-process
 [pull]
 	ff = only
+[rerere]
+	enabled = true
