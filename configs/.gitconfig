@@ -209,3 +209,4 @@
 	ff = only
 [rerere]
 	enabled = true
+	autoupdate = true
