@@ -10,7 +10,7 @@ antigen bundle brew
 antigen bundle git-extras
 antigen bundle composer
 antigen bundle sudo
-antigen bundle n98-magerun
+#antigen bundle n98-magerun
 antigen bundle jira
 
 #Load third party plugins
@@ -26,3 +26,8 @@ antigen apply
 
 source ~/extra.zsh
 #source ~/zotfiles/bin/gist/weatherfunk.zsh
+export PATH="/usr/local/opt/php@7.1/bin:$PATH"
+export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
