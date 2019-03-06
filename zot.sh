@@ -33,7 +33,6 @@ ln -vsfn ~/zotfiles/configs/.taskrc ~/
 ln -vsfn ~/zotfiles/configs/.tmux.conf ~/
 ln -vsfn ~/zotfiles/configs/.vimrc ~/
 mkdir -p ~/.tmuxinator/
-ln -vsfn ~/zotfiles/configs/devenv.yml ~/.tmuxinator/
 ln -vsfn ~/zotfiles/configs/dircolors ~/
 echo -e "${RESET}"
 
