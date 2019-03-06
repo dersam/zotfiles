@@ -66,12 +66,8 @@ kraken () {
 	~/Applications/GitKraken.app/Contents/MacOS/GitKraken -p $(pwd)
 }
 
-#MySQL
-alias mysql="mycli"
-export DEV_DB_NAME="develop"
-
 devdb () {
-	mysql -h develop.vagrant.dev -u root -D $DEV_DB_NAME
+	mycli -h $DEV_DB_HOST -u $DEV_DB_USER -p $DEV_DB_PASSWORD
 }
 
 # Taskwarrior
