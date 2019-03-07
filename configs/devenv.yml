@@ -7,7 +7,7 @@ root: ~/projects/platform
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
-# pre: sudo /etc/rc.d/mysqld start
+pre: vagrant status && vagrant up
 
 # Project hooks
 # Runs on project start, always
@@ -32,9 +32,6 @@ startup_window: projects
 
 # Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
 startup_pane: 1
-
-# Controls whether the tmux session should be attached to automatically. Defaults to true.
-# attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
 # post: tmux -CC attach -t devenv
