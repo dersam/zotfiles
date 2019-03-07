@@ -48,6 +48,8 @@ todev () {
 	cdevelop && git pull && git merge @{-1}
 }
 
+# Inflict changes from a feature branch upon the dev branch.
+# Pull dev branch, merge it to the current branch, then merge current branch to dev and push it up
 inflict () {
 	cdevelop && git pull && clast && git merge $DEV_BRANCH_NAME && cdevelop && git merge @{-1} && git push && clast
 }
@@ -60,69 +62,8 @@ cleanremotes(){
 	git fetch origin -p && git fetch composer -p
 }
 
-## GitKraken
-## Open GitKraken using the current repo directory.
-kraken () {
-	~/Applications/GitKraken.app/Contents/MacOS/GitKraken -p $(pwd)
-}
-
 devdb () {
 	mycli -h $DEV_DB_HOST -u $DEV_DB_USER -p $DEV_DB_PASSWORD
-}
-
-# Taskwarrior
-tn () {
-	task $1 modify +next
-}
-
-td () {
-	task $1 done
-}
-
-ta () {
-	task add $@
-}
-
-ts () {
-	task $1 start
-}
-
-th () {
-	task $1 stop
-}
-
-te () {
-	task $1 edit
-}
-
-tdep () {
-	task $1 modify depends:$2
-}
-
-ams () {
-	task sync
-}
-
-tcon () {
-	task config $@
-}
-
-tasklist () {
-	while true
-	do
-		clear
-		task $@
-		sleep 1
-	done
-}
-
-taskmux () {
-	tmux kill-session -t tasklist
-	tmuxinator start tasklist
-}
-
-ct () {
-	clear && task
 }
 
 export EVENT_NOKQUEUE=1
