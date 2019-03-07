@@ -10,7 +10,6 @@ antigen bundle brew
 antigen bundle git-extras
 antigen bundle composer
 antigen bundle sudo
-#antigen bundle n98-magerun
 antigen bundle jira
 
 #Load third party plugins
