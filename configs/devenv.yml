@@ -41,7 +41,11 @@ startup_pane: 1
 
 windows:
   - projects:
-      layout: main-horizontal
+      layout: 593f,205x63,0,0[205x31,0,0,0,205x31,0,32{117x31,0,32,1,87x31,118,32,2}]
       panes:
         - ./robo view:error-log
-        - echo "hello"
+        - clear
+        - cd ../mobile && grunt serve
+  - database:
+      panes:
+        - devdb
