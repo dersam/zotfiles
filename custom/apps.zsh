@@ -74,13 +74,13 @@ shmux () {
 		r)
 			;&
 		restart)
-			tmux kill-session -t devenv
-			tmuxinator start devenv
+			tmux kill-session -t $DEV_TMUX_ENV
+			tmuxinator start $DEV_TMUX_ENV
 			;;
 		a)
 			;&
 		attach)
-			tmux detach-client -s devenv
+			tmux detach-client -s $DEV_TMUX_ENV
 			tmux a
 			;;
 		*)

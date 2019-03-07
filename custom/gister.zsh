@@ -17,6 +17,15 @@ install_gist () {
   fi
 }
 
+install_tmuxinator_gist () {
+  local name=$HOME/.tmuxinator/$1.yml
+  if [ ! -f $name ]; then
+    wget $2 --output-document=$name
+  fi
+}
+
+install_tmuxinator_gist salesfloor https://gist.github.com/dersam/0bb70debeda51411d6c205dd2a0e1af5/raw
+
 # # Behatbox docker container loader
 # install_gist behatbox https://gist.githubusercontent.com/dersam/70de2d7e505fa9bb32378f953d295ada/raw
 
