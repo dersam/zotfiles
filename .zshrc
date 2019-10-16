@@ -24,3 +24,4 @@ antigen bundle $HOME/zotfiles/custom --no-local-clone
 antigen apply
 
 source ~/extra.zsh
+

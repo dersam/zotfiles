@@ -129,6 +129,7 @@
 	precomposeunicode = false
 	pager = cat
 	excludesfile = /Users/sam/.gitignore_global
+	commitGraph = true
 
 # Colors http://nathanhoad.net/how-to-colours-in-git
 
@@ -161,6 +162,7 @@
 
 	# Detect copies as well as renames
 	renames = copies
+	algorithm = patience
 	# tool = Kaleidoscope
 
 # [difftool]
