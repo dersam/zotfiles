@@ -231,6 +231,7 @@ if exists("&undodir")
 endif
 
 set wrap
+set linebreak
 
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
