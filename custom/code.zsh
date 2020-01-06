@@ -4,9 +4,6 @@
 # Customizations and functions useful for development.
 ########
 
-# Add completion for gulp
-hash foo 2>/dev/null && eval "$(gulp --completion=zsh)"
-
 # Boot mobile emulators.
 msim () {
 	if [[ $1 == 'ios' ]]; then

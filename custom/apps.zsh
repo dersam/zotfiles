@@ -5,8 +5,15 @@
 ###########
 
 # Git
+# override with ~/extra.zsh if necessary
 export DEV_BRANCH_NAME='dev'
 ##
+
+retop () {
+	git branch -D tophat
+	git checkout -b tophat
+}
+
 # Merge all canonical branches from current directory.
 choochoo()
 {
