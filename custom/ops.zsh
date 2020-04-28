@@ -11,7 +11,6 @@ alias nsp='netstat -tulpn'
 alias ss='lsof -i'
 alias ipp="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-alias vs="vagrant global-status --prune"
 # See http://ipinfo.io/developers for more info.
 alias ipgeo="curl ipinfo.io"
 alias vmt="/usr/bin/vmware-toolbox-cmd"

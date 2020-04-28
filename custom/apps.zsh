@@ -4,6 +4,11 @@
 # Contains customizations and shortcuts for various applications.
 ###########
 
+# VSCode
+vs () {
+	code .
+}
+
 # Git
 # override with ~/extra.zsh if necessary
 export DEV_BRANCH_NAME='dev'
