@@ -13,7 +13,7 @@ Uninstall and recompile vim with `brew remove vim && brew install --build-from-s
 
 ```
 _arguments:448: _vim_files: function definition file not found
-```
+```configs
 https://github.com/robbyrussell/oh-my-zsh/issues/518
 
 Fix:
