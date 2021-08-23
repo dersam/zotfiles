@@ -40,3 +40,7 @@ vim +PluginInstall +qall
 # if [ ! -d ~"/.tmux/plugins/tpm" ]; then
 # 	git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 # fi
+
+if [ $SPIN ]; then
+  sudo apt-get install -y ripgrep
+fi
