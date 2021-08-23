@@ -23,7 +23,6 @@ call vundle#begin('~/.vim/bundle')
 	Plugin 'gmarik/Vundle.vim'
 	Plugin 'Solarized'
 	Plugin 'editorconfig/editorconfig-vim'
-	Plugin 'tpope/vim-fugitive'
 	Plugin 'tpope/vim-surround'
 	Plugin 'tpope/vim-commentary'
 	Plugin 'tpope/vim-sleuth'

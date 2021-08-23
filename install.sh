@@ -31,6 +31,8 @@ echo -e "Update path..."
 PATH=~/dotfiles/bin:$PATH
 
 echo -e "Update Vim Vundles..."
+mkdir -p ~/.vim/swaps
+mkdir -p ~/.vim/backups
 if [ ! -d ~"/.vim/bundle/Vundle.vim" ]; then
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
