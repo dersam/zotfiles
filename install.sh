@@ -13,6 +13,7 @@ fi
 
 touch ~/extra.zsh
 
+source ~/antigen/antigen.zsh
 antigen update
 
 echo -e "Linking .zshrc..."
