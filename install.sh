@@ -2,7 +2,7 @@
 autoload -U colors
 colors
 
-source ~/zotfiles/custom/formatting.zsh
+source ~/dotfiles/custom/formatting.zsh
 
 if [[ ! -d $HOME/antigen ]]; then
 	echo -e "Antigen not found, installing..."
@@ -16,18 +16,18 @@ touch ~/extra.zsh
 antigen update
 
 echo -e "Linking .zshrc..."
-ln -vsfn ~/zotfiles/.zshrc ~/.zshrc
+ln -vsfn ~/dotfiles/.zshrc ~/.zshrc
 
 echo -e "Symlinking configs..."
-ln -vsfn ~/zotfiles/configs/.gitconfig ~/
-ln -vsfn ~/zotfiles/configs/.gitignore ~/
-ln -vsfn ~/zotfiles/configs/.tmux.conf ~/
-ln -vsfn ~/zotfiles/configs/.vimrc ~/
-ln -vsfn ~/zotfiles/configs/dircolors ~/
+ln -vsfn ~/dotfiles/configs/.gitconfig ~/
+ln -vsfn ~/dotfiles/configs/.gitignore ~/
+ln -vsfn ~/dotfiles/configs/.tmux.conf ~/
+ln -vsfn ~/dotfiles/configs/.vimrc ~/
+ln -vsfn ~/dotfiles/configs/dircolors ~/
 echo -e "${RESET}"
 
 echo -e "Update path..."
-PATH=~/zotfiles/bin:$PATH
+PATH=~/dotfiles/bin:$PATH
 
 echo -e "Update Vim Vundles..."
 if [ ! -d ~"/.vim/bundle/Vundle.vim" ]; then
