@@ -1,6 +1,4 @@
 #!/usr/bin/env zsh
-curdir=`pwd`
-cd $HOME
 autoload -U colors
 colors
 
@@ -15,10 +13,7 @@ fi
 
 touch ~/extra.zsh
 
-echo -e "${BLUE}${BOLD}Checking for updates...${RESET}"
-cd ~/zotfiles && git stash && git pull && git stash pop
 antigen update
-antigen selfupdate
 
 echo -e "Linking .zshrc..."
 ln -vsfn ~/zotfiles/.zshrc ~/.zshrc
@@ -26,13 +21,8 @@ ln -vsfn ~/zotfiles/.zshrc ~/.zshrc
 echo -e "Symlinking configs..."
 ln -vsfn ~/zotfiles/configs/.gitconfig ~/
 ln -vsfn ~/zotfiles/configs/.gitignore ~/
-ln -vsfn ~/zotfiles/configs/.my.cnf ~/
-ln -vsfn ~/zotfiles/configs/.grcat ~/
-ln -vsfn ~/zotfiles/configs/.myclirc ~/
-ln -vsfn ~/zotfiles/configs/.taskrc ~/
 ln -vsfn ~/zotfiles/configs/.tmux.conf ~/
 ln -vsfn ~/zotfiles/configs/.vimrc ~/
-mkdir -p ~/.tmuxinator/
 ln -vsfn ~/zotfiles/configs/dircolors ~/
 echo -e "${RESET}"
 
@@ -43,16 +33,9 @@ echo -e "Update Vim Vundles..."
 if [ ! -d ~"/.vim/bundle/Vundle.vim" ]; then
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
-#vim +PluginInstall +qall
+vim +PluginInstall +qall
 
-echo -e "Configuring tmux..."
-if [ ! -d ~"/.tmux/plugins/tpm" ]; then
-	git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
-fi
-
-echo -e "Reloading zotfiles..."
-source $HOME/.zshrc
-
-cd $curdir
-
-echo -e "zot complete."
+# echo -e "Configuring tmux..."
+# if [ ! -d ~"/.tmux/plugins/tpm" ]; then
+# 	git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
+# fi

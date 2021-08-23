@@ -15,11 +15,6 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[
 alias ipgeo="curl ipinfo.io"
 alias vmt="/usr/bin/vmware-toolbox-cmd"
 
-# Server
-# Get the number of php-fpm processes, and their average size in MB.
-#alias fpmstat='ps aux | grep php-fpm | wc -l ; ps --no-headers -o "rss,cmd" -C php-fpm | awk '{ sum+=$1 } END { printf ("%d%s\n", sum/NR/1024,"M") }'
-alias fpmstat="ps aux | grep php-fpm | wc -l ; ps --no-headers -o \"rss,cmd\" -C php-fpm | awk '{ sum+=\$1 } END { printf (\"%d%s\n\", sum/NR/1024,\"M\") }'"
-
 #Images
 crunch () {
   case $1 in
@@ -30,41 +25,6 @@ crunch () {
       echo "$1 is not a valid option"
   esac
 }
-
-#Redis
-startredis() {
-	redis-server /usr/local/etc/redis.conf
-}
-
-#Docker
-alias makedocker="docker-machine create --driver=parallels --parallels-memory=4000 default && dockenv"
-
-alias dockerup="docker-machine start default"
-
-alias selbuild="docker run --rm --name=grid --add-host='develop.vagrant.dev:192.168.80.80' -p 4444:24444 -p 5920:25900 \
-  -v /dev/shm:/dev/shm -e VNC_PASSWORD=hola elgalu/selenium:2.51.0b"
-
-selvnc () {
-	open vnc://:hola@$(docker-machine ip default):5920
-}
-
-
-##
-# Custom completion for vshell command.
-#
-# The vshell command is part of the VagrantShell repo located at
-# https://github.com/danemacmillan/vagrantshell
-#
-# Adapted from danemacmillan dotfiles
-#
-_vshell_completion()
-{
-	local -a options
-	options=('help' 'map' 'restart' 'update' 'xdebug' 'xhprof')
-	_describe 'values' options
-}
-
-compdef _vshell_completion vshell
 
 ##
 # Remotely run commands with color TTY. If passing chained commands (&&),

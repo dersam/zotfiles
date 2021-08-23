@@ -4,23 +4,6 @@
 # Items related to navigation and working in the terminal.
 ###############
 
-#Environment variables
-export PATH=/usr/local/sbin:~/npm-global/bin:/usr/local/bin:$PATH
-export EDITOR="vim"
-export DISABLE_AUTO_TITLE=true
-
-# Alias the updater script
-alias zot=". $HOME/zotfiles/zot.sh"
-
-# Assumes that coreutils and other GNU tools have replaced OSX'
-export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
-
-
-# you should really do something with pig maybe
-if [[ -f $HOME/.pigrc ]]; then
-	source ~/.pigrc
-fi
-
 if [[ -n "$SSH_CLIENT" ]]; then
 	DISABLE_UNTRACKED_FILES_DIRTY='true'
 fi
@@ -70,6 +53,14 @@ export ZSH_HOST_OS=$(uname | awk '{print tolower($0)}')
 case $ZSH_HOST_OS in
 	darwin*)
 
+	#Environment variables
+	export PATH=/usr/local/sbin:~/npm-global/bin:/usr/local/bin:$PATH
+	export EDITOR="vim"
+	export DISABLE_AUTO_TITLE=true
+
+	# Assumes that coreutils and other GNU tools have replaced OSX'
+	export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+
 	export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 	export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
 	alias ls='gls --color=auto'
@@ -101,5 +92,3 @@ bindkey '\e[B' history-beginning-search-forward
 
 dircolorrc=~/dircolors
 eval "$(dircolors $dircolorrc)"
-
-alias npms='npm -s'

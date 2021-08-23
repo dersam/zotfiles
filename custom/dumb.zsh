@@ -1,4 +1,4 @@
-#Dumb stuff that doesn't belong anywhere else.
+# Dumb stuff that doesn't belong anywhere else.
 
 weather () {
   curl wttr.in/$1
