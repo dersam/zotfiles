@@ -11,7 +11,7 @@ be obliterated. Use with caution- the list of symlinks begins at "Symlinking Con
 in `zot.sh`.
 
 # Features
-* Auto-update and installation with `zot.sh`
+* installation with `install.sh`
 * ~/extra.zsh serves as the location for any machine-specific configs that don't belong elsewhere. It is never added to the repo.
 * Custom configs for tmux using tmuxinator.
 * Special bin directory for custom scripts, included in $PATH
