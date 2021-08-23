@@ -19,7 +19,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme dersam/staples staples
 
 #Load personal customizations
-antigen bundle $HOME/zotfiles/custom --no-local-clone
+antigen bundle $HOME/dotfiles/custom --no-local-clone
 
 antigen apply
 
