@@ -43,6 +43,14 @@ vim +PluginInstall +qall
 # 	git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 # fi
 
+
+
 if [ $SPIN ]; then
   sudo apt-get install -y ripgrep
+
+	cat <<EOF > ~/.gitconfig.local
+[user]
+	email = sam.schmidt@shopify.com
+	name = Sam Schmidt
+EOF
 fi
