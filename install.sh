@@ -20,7 +20,7 @@ echo -e "Linking .zshrc..."
 ln -vsfn ~/dotfiles/.zshrc ~/.zshrc
 
 echo -e "Symlinking configs..."
-ln -vsfn ~/dotfiles/configs/.gitconfig ~/
+#ln -vsfn ~/dotfiles/configs/.gitconfig ~/
 ln -vsfn ~/dotfiles/configs/.gitignore ~/
 ln -vsfn ~/dotfiles/configs/.tmux.conf ~/
 ln -vsfn ~/dotfiles/configs/.vimrc ~/
