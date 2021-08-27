@@ -84,7 +84,7 @@ case $ZSH_HOST_OS in
 esac
 
 # Recursive history search on up arrow.
-setopt inc_append_history share_history
+setopt share_history
 bindkey '\eOA' history-beginning-search-backward
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\eOB' history-beginning-search-forward

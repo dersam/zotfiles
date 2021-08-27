@@ -24,3 +24,5 @@ antigen bundle $HOME/dotfiles/custom --no-local-clone
 antigen apply
 
 source ~/extra.zsh
+
+[[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
